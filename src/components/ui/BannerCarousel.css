@@ -1,0 +1,122 @@
+.banner-wrap {
+  position: relative;
+}
+
+.banner-viewport {
+  overflow: hidden;
+  border-radius: var(--r-lg);
+}
+
+.banner-track {
+  display: flex;
+  transition: transform var(--t-slow);
+}
+
+.banner-slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  padding: 32px 38px;
+  overflow: hidden;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 60%;
+}
+.banner-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+.banner-highlight {
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #fff;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
+}
+.banner-sub {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+}
+.banner-cta {
+  align-self: flex-start;
+}
+
+.banner-emoji {
+  position: absolute;
+  right: 6%;
+  bottom: -10px;
+  font-size: 11rem;
+  line-height: 1;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+  z-index: 1;
+  opacity: 0.95;
+}
+.banner-glow {
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 70%);
+  z-index: 0;
+}
+
+.banner-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 38px;
+  display: flex;
+  gap: 7px;
+  z-index: 3;
+}
+.banner-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: width var(--t), background var(--t);
+}
+.banner-dot.is-active {
+  width: 26px;
+  border-radius: var(--r-pill);
+  background: #fff;
+}
+
+@media (max-width: 760px) {
+  .banner-slide {
+    min-height: 170px;
+    padding: 22px 22px;
+  }
+  .banner-highlight {
+    font-size: 1.6rem;
+  }
+  .banner-title {
+    font-size: 1rem;
+  }
+  .banner-sub {
+    font-size: 0.82rem;
+  }
+  .banner-content {
+    max-width: 72%;
+  }
+  .banner-emoji {
+    font-size: 6.5rem;
+    right: 2%;
+  }
+  .banner-dots {
+    left: 22px;
+    bottom: 10px;
+  }
+}

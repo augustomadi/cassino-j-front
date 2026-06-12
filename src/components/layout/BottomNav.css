@@ -1,0 +1,66 @@
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--bottomnav-h);
+    background: rgba(15, 29, 46, 0.96);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-soft);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 6px;
+    z-index: 65;
+  }
+
+  .bn-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.66rem;
+    font-weight: 500;
+    color: var(--text-dim);
+    padding: 6px 0;
+    transition: color var(--t-fast);
+  }
+  .bn-item:hover,
+  .bn-item.is-active {
+    color: var(--gold-400);
+  }
+
+  .bn-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    margin-top: -22px;
+  }
+  .bn-center-coin {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--grad-gold);
+    color: #2a1a00;
+    box-shadow: var(--shadow-gold), 0 0 0 4px var(--bg-800);
+    transition: transform var(--t);
+  }
+  .bn-center:active .bn-center-coin {
+    transform: scale(0.94);
+  }
+  .bn-center-label {
+    font-size: 0.66rem;
+    font-weight: 700;
+    color: var(--gold-400);
+  }
+}

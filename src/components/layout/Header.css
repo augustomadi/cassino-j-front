@@ -1,0 +1,145 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  background: rgba(11, 22, 34, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+  z-index: 70;
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 18px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--surface-1);
+  color: var(--text);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.icon-btn:hover {
+  background: var(--surface-2);
+  color: var(--text-strong);
+}
+.header-menu {
+  display: none;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: var(--text-strong);
+}
+
+.header-search {
+  flex: 1;
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  height: 44px;
+  background: var(--bg-900);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  color: var(--text-dim);
+  transition: border-color var(--t), box-shadow var(--t);
+}
+.header-search:focus-within {
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.12);
+}
+.header-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-strong);
+  font-size: 0.92rem;
+}
+.header-search input::placeholder {
+  color: var(--text-dim);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.1;
+  padding-right: 4px;
+}
+.balance-label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+.balance-value {
+  font-size: 0.98rem;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--grad-gold);
+  color: #2a1a00;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ============ Mobile ============ */
+@media (max-width: 1024px) {
+  .header-menu {
+    display: grid;
+  }
+}
+
+@media (max-width: 760px) {
+  .header-search {
+    display: none;
+  }
+  .brand-name {
+    display: none;
+  }
+  .header-deposit span:last-child,
+  .header-deposit {
+    padding: 10px 12px;
+  }
+  .balance-label {
+    display: none;
+  }
+}
