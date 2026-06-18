@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     height: var(--bottomnav-h);
-    background: rgba(15, 29, 46, 0.96);
+    background: color-mix(in srgb, var(--bg-800) 96%, transparent);
     backdrop-filter: blur(12px);
     border-top: 1px solid var(--border-soft);
     display: flex;
@@ -51,7 +51,7 @@
     height: 54px;
     border-radius: 50%;
     background: var(--grad-gold);
-    color: #2a1a00;
+    color: var(--on-secondary);
     box-shadow: var(--shadow-gold), 0 0 0 4px var(--bg-800);
     transition: transform var(--t);
   }

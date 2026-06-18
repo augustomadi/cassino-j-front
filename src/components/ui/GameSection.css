@@ -75,7 +75,7 @@
 
 @media (max-width: 760px) {
   .section-track {
-    grid-auto-columns: 132px;
+    grid-auto-columns: 148px;
     gap: 10px;
   }
   .section-title {

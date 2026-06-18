@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import {
   IcDashboard, IcAffiliates, IcUsers, IcFinance, IcTransactions,
-  IcGames, IcSettings, IcBell, IcSearch, IcExternal, IcLogout, IcMenu, IcX,
+  IcGames, IcSettings, IcPalette, IcBell, IcSearch, IcExternal, IcLogout, IcMenu, IcX,
 } from './AdminIcons';
 import { IconLogo } from '../../components/icons/Icons';
 
@@ -13,6 +13,7 @@ const nav = [
   { to: '/admin/financeiro', label: 'Financeiro', Icon: IcFinance },
   { to: '/admin/transacoes', label: 'Transações', Icon: IcTransactions },
   { to: '/admin/jogos', label: 'Jogos', Icon: IcGames },
+  { to: '/admin/aparencia', label: 'Aparência', Icon: IcPalette },
   { to: '/admin/configuracoes', label: 'Configurações', Icon: IcSettings },
 ];
 

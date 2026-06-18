@@ -153,3 +153,12 @@ export const IcMenu = ({ size = 22 }) => (
     <path d="M3 6h18M3 12h18M3 18h18" />
   </svg>
 );
+
+export const IcPalette = ({ size = 20 }) => (
+  <svg {...base(size)}>
+    <path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.9 1.8-1.9 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8H16a5 5 0 0 0 5-5c0-3.9-4-7-9-7z" />
+    <circle cx="7.5" cy="10.5" r="1.1" fill="currentColor" stroke="none" />
+    <circle cx="12" cy="7.5" r="1.1" fill="currentColor" stroke="none" />
+    <circle cx="16.5" cy="10.5" r="1.1" fill="currentColor" stroke="none" />
+  </svg>
+);

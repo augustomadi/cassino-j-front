@@ -181,12 +181,12 @@ export const IconLogo = ({ size = 30 }) => (
   <svg width={size} height={size} viewBox="0 0 32 32" fill="none">
     <defs>
       <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stopColor="#ffc24d" />
-        <stop offset="1" stopColor="#f5a623" />
+        <stop offset="0" style={{ stopColor: 'var(--gold-400)' }} />
+        <stop offset="1" style={{ stopColor: 'var(--gold-500)' }} />
       </linearGradient>
     </defs>
     <path d="M16 2 28 9v14L16 30 4 23V9L16 2z" fill="url(#lg)" />
-    <path d="M16 8 22 11.5v7L16 22l-6-3.5v-7L16 8z" fill="#0b1622" />
+    <path d="M16 8 22 11.5v7L16 22l-6-3.5v-7L16 8z" style={{ fill: 'var(--bg-900)' }} />
     <circle cx="16" cy="15" r="2.4" fill="url(#lg)" />
   </svg>
 );

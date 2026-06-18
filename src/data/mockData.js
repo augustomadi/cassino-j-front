@@ -49,9 +49,9 @@ export const promoCards = [
 
 /* ---- Banners de destaque (hero) ---- */
 export const banners = [
-  { id: 'b1', title: 'Torneio Diário da', highlight: 'Fortuna em Dobro', sub: 'Premiação de R$ 100.000 toda semana', grad: 'linear-gradient(120deg,#b3201f 0%,#7a0f0e 100%)', emoji: '🐯', cta: 'Participar' },
-  { id: 'b2', title: 'Cashback de até', highlight: '25% Todos os Dias', sub: 'Recupere parte das suas apostas', grad: 'linear-gradient(120deg,#1e6fd6 0%,#0e3a78 100%)', emoji: '💎', cta: 'Resgatar' },
-  { id: 'b3', title: 'Novos Jogos', highlight: 'Já Disponíveis', sub: 'Os lançamentos mais quentes da semana', grad: 'linear-gradient(120deg,#f5a623 0%,#b5740a 100%)', emoji: '🎰', cta: 'Explorar' },
+  { id: 'b1', title: 'Torneio Diário da', highlight: 'Fortuna em Dobro', sub: 'Premiação de R$ 100.000 toda semana', grad: 'linear-gradient(120deg,#1e1812 0%,#0b0906 100%)', emoji: '🐯', cta: 'Participar', image: '/src/assets/banner-fortuna-dobro.png' },
+  { id: 'b2', title: 'Jogo do', highlight: 'Tigrinho', sub: 'Diversão, sorte e grandes prêmios te esperam!', grad: 'linear-gradient(120deg,#1d1710 0%,#0c0a06 100%)', emoji: '🐯', cta: 'Jogar agora', image: '/src/assets/banner-tigrinho.png' },
+  { id: 'b3', title: 'Novos Jogos', highlight: 'Já Disponíveis', sub: 'Os lançamentos mais quentes da semana', grad: 'linear-gradient(120deg,#1d1710 0%,#0c0a06 100%)', emoji: '🎰', cta: 'Explorar', image: '/src/assets/banner-novos-jogos.png' },
 ];
 
 /* ---- Jogos populares ---- */

@@ -29,7 +29,8 @@ export default function Header({ onMenu, loggedIn, balance, onToggleAuth }) {
                 <span className="money balance-value">{fmtBRL(balance)}</span>
               </div>
               <button className="btn btn-gold header-deposit">
-                <IconCoin size={18} /> Depositar
+                <IconCoin size={18} />
+                <span className="header-deposit-label">Depositar</span>
               </button>
               <button className="avatar" onClick={onToggleAuth} aria-label="Conta">
                 <span>A</span>

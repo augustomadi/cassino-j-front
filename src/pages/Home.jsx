@@ -1,4 +1,6 @@
 import './Home.css';
+import cashbackImg from '../assets/promo-cashback.png';
+import appImg from '../assets/promo-app.png';
 import WinnersTicker from '../components/ui/WinnersTicker';
 import TopWinners from '../components/ui/TopWinners';
 import BannerCarousel from '../components/ui/BannerCarousel';
@@ -20,8 +22,8 @@ import {
 } from '../components/icons/Icons';
 
 const sidePromos = [
-  { id: 'app', title: 'Baixe nosso APP', sub: 'CASSINO', cta: 'Baixar', grad: 'linear-gradient(135deg,#16a34a,#0c6b32)', emoji: '📱' },
-  { id: 'cb', title: 'Até 25% de', sub: 'CASHBACK', cta: 'Resgatar', grad: 'linear-gradient(135deg,#7c3aed,#4d1fa3)', emoji: '💎' },
+  { id: 'app', image: appImg, alt: 'Baixe nosso APP' },
+  { id: 'cb', image: cashbackImg, alt: 'Até 25% de cashback' },
 ];
 
 export default function Home() {
@@ -42,22 +44,28 @@ export default function Home() {
         <BannerCarousel />
         <div className="home-side-promos">
           {sidePromos.map((p) => (
-            <div className="side-promo" key={p.id} style={{ background: p.grad }}>
-              <div className="side-promo-text">
-                <span>{p.title}</span>
-                <strong>{p.sub}</strong>
-                <button className="btn btn-gold side-promo-cta">{p.cta}</button>
-              </div>
-              <span className="side-promo-emoji">{p.emoji}</span>
+            <div className={`side-promo ${p.image ? 'side-promo-image' : ''}`} key={p.id}>
+              {p.image ? (
+                <img className="side-promo-img" src={p.image} alt={p.alt} />
+              ) : (
+                <>
+                  <div className="side-promo-text">
+                    <span>{p.title}</span>
+                    <strong>{p.sub}</strong>
+                    <button className="btn btn-gold side-promo-cta">{p.cta}</button>
+                  </div>
+                  <span className="side-promo-emoji">{p.emoji}</span>
+                </>
+              )}
             </div>
           ))}
         </div>
       </section>
 
-      <GameSection title="Populares" icon={IconFire} accent="var(--orange-500)" games={popularGames} />
-      <GameSection title="Cassino ao Vivo" icon={IconLive} accent="var(--red-500)" games={liveGames} />
-      <GameSection title="Jogos Crash" icon={IconPlane} accent="var(--gold-400)" games={crashGames} />
-      <GameSection title="Slots" icon={IconSlots} accent="var(--purple-400)" games={slotsGames} />
+      <GameSection title="Populares" icon={IconFire} games={popularGames} />
+      <GameSection title="Cassino ao Vivo" icon={IconLive} games={liveGames} />
+      <GameSection title="Jogos Crash" icon={IconPlane} games={crashGames} />
+      <GameSection title="Slots" icon={IconSlots} games={slotsGames} />
 
       <section className="providers">
         <h3 className="section-title providers-title">

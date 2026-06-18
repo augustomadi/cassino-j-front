@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   height: var(--header-h);
-  background: rgba(11, 22, 34, 0.85);
+  background: color-mix(in srgb, var(--bg-800) 85%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-soft);
   z-index: 70;
@@ -72,7 +72,7 @@
 }
 .header-search:focus-within {
   border-color: var(--gold-500);
-  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.12);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold-500) 12%, transparent);
 }
 .header-search input {
   flex: 1;
@@ -116,17 +116,13 @@
   height: 42px;
   border-radius: 50%;
   background: var(--grad-gold);
-  color: #2a1a00;
+  color: var(--on-secondary);
   font-weight: 800;
   flex-shrink: 0;
 }
 
 /* ============ Mobile ============ */
-@media (max-width: 1024px) {
-  .header-menu {
-    display: grid;
-  }
-}
+/* header-menu oculto — BottomNav "Menu" cobre essa função em mobile */
 
 @media (max-width: 760px) {
   .header-search {
@@ -135,9 +131,11 @@
   .brand-name {
     display: none;
   }
-  .header-deposit span:last-child,
   .header-deposit {
     padding: 10px 12px;
+  }
+  .header-deposit-label {
+    display: none;
   }
   .balance-label {
     display: none;

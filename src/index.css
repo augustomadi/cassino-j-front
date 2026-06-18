@@ -114,13 +114,13 @@ input {
 
 .btn-gold {
   background: var(--grad-gold);
-  color: #2a1a00;
+  color: var(--on-secondary);
   font-weight: 700;
   box-shadow: var(--shadow-gold);
 }
 .btn-gold:hover {
-  filter: brightness(1.05);
-  box-shadow: 0 10px 32px var(--gold-glow);
+  filter: brightness(1.06);
+  box-shadow: 0 6px 20px var(--gold-glow);
 }
 
 .btn-ghost {
@@ -136,16 +136,16 @@ input {
 .btn-outline-gold {
   background: transparent;
   color: var(--gold-400);
-  border: 1px solid rgba(245, 166, 35, 0.45);
+  border: 1px solid color-mix(in srgb, var(--gold-500) 45%, transparent);
 }
 .btn-outline-gold:hover {
-  background: rgba(245, 166, 35, 0.1);
+  background: color-mix(in srgb, var(--gold-500) 10%, transparent);
   border-color: var(--gold-400);
 }
 
 .btn-green {
   background: var(--grad-green);
-  color: #04230f;
+  color: var(--on-green);
   font-weight: 700;
 }
 
@@ -164,8 +164,8 @@ input {
   color: #fff;
 }
 .chip-live {
-  background: rgba(230, 57, 70, 0.16);
-  color: #ff7a85;
+  background: color-mix(in srgb, var(--red-500) 16%, transparent);
+  color: var(--red-text);
 }
 .chip-live::before {
   content: '';

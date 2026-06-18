@@ -64,10 +64,10 @@ export const monthlyPnL = [
 
 /* ---- Métodos de pagamento (donut) ---- */
 export const paymentMethods = [
-  { name: 'PIX', value: 78, color: '#22c55e' },
-  { name: 'Cartão', value: 14, color: '#f5a623' },
-  { name: 'Boleto', value: 5, color: '#7c3aed' },
-  { name: 'Cripto', value: 3, color: '#ff6b35' },
+  { name: 'PIX', value: 78, color: 'var(--green-500)' },
+  { name: 'Cartão', value: 14, color: 'var(--gold-500)' },
+  { name: 'Boleto', value: 5, color: 'var(--purple-500)' },
+  { name: 'Cripto', value: 3, color: 'var(--orange-500)' },
 ];
 
 /* ---- Despesas operacionais ---- */

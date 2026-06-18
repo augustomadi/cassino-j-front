@@ -6,6 +6,7 @@ import Users from './pages/Users';
 import Finance from './pages/Finance';
 import Transactions from './pages/Transactions';
 import Games from './pages/Games';
+import Appearance from './pages/Appearance';
 import Settings from './pages/Settings';
 
 export default function AdminApp() {
@@ -17,6 +18,7 @@ export default function AdminApp() {
       <Route path="financeiro" element={<Finance />} />
       <Route path="transacoes" element={<Transactions />} />
       <Route path="jogos" element={<Games />} />
+      <Route path="aparencia" element={<Appearance />} />
       <Route path="configuracoes" element={<Settings />} />
     </Routes>
   );

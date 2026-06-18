@@ -9,7 +9,7 @@ export default function TopWinners() {
       {topWinners.map((g) => (
         <div className="topwin-card" key={g.id}>
           <span className="topwin-rank">{g.rank}</span>
-          <span className="topwin-thumb" style={{ background: g.grad }}>
+          <span className="topwin-thumb" style={g.media ? { background: g.grad } : undefined}>
             {g.media ? (
               isVideo(g.media) ? (
                 <video src={g.media} autoPlay loop muted playsInline preload="metadata" />

@@ -26,13 +26,12 @@ export default function Sidebar({ open, onClose, active, onSelect }) {
             {promoCards.map((p) => {
               const Icon = iconByName[p.icon];
               return (
-                <button key={p.id} className="promo-card" style={{ background: p.grad }}>
+                <button key={p.id} className="promo-card">
                   <span className="promo-text">
                     <small>{p.kicker}</small>
                     <strong>{p.title}</strong>
                   </span>
-                  <span className="promo-icon">{Icon && <Icon size={26} />}</span>
-                  <span className="promo-shine" />
+                  <span className="promo-icon">{Icon && <Icon size={22} />}</span>
                 </button>
               );
             })}

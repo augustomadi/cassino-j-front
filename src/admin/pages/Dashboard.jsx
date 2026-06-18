@@ -44,9 +44,9 @@ export default function Dashboard() {
           <AreaChart
             data={revenueSeries}
             series={[
-              { key: 'deposits', label: 'Depósitos', color: '#22c55e' },
-              { key: 'withdrawals', label: 'Saques', color: '#f5a623' },
-              { key: 'ggr', label: 'GGR', color: '#7c3aed' },
+              { key: 'deposits', label: 'Depósitos', color: 'var(--green-500)' },
+              { key: 'withdrawals', label: 'Saques', color: 'var(--gold-500)' },
+              { key: 'ggr', label: 'GGR', color: 'var(--purple-500)' },
             ]}
           />
         </div>

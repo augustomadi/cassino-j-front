@@ -7,7 +7,7 @@ const isVideo = (url) => /\.(mp4|webm|mov)(\?|$)/i.test(url);
 export default function GameCard({ game }) {
   return (
     <article className="game-card">
-      <div className="game-thumb" style={{ background: game.grad }}>
+      <div className="game-thumb" style={game.media ? { background: game.grad } : undefined}>
         {game.media ? (
           isVideo(game.media) ? (
             <video

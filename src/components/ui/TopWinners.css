@@ -19,7 +19,7 @@
   transition: border-color var(--t), transform var(--t);
 }
 .topwin-card:hover {
-  border-color: rgba(245, 166, 35, 0.4);
+  border-color: color-mix(in srgb, var(--gold-500) 40%, transparent);
   transform: translateY(-2px);
 }
 
@@ -42,6 +42,9 @@
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
+  background:
+    radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--gold-500) 12%, transparent), transparent 65%),
+    linear-gradient(160deg, var(--surface-2), var(--bg-800));
 }
 .topwin-thumb img,
 .topwin-thumb video {

@@ -3,7 +3,7 @@ import './GameSection.css';
 import GameCard from './GameCard';
 import { IconChevronLeft, IconChevronRight } from '../icons/Icons';
 
-export default function GameSection({ title, icon: Icon, accent, games }) {
+export default function GameSection({ title, icon: Icon, games }) {
   const trackRef = useRef(null);
 
   const scroll = (dir) => {
@@ -17,7 +17,7 @@ export default function GameSection({ title, icon: Icon, accent, games }) {
       <div className="section-head">
         <h3 className="section-title">
           {Icon && (
-            <span className="section-icon" style={accent ? { color: accent } : undefined}>
+            <span className="section-icon">
               <Icon size={20} />
             </span>
           )}

@@ -12,12 +12,17 @@
   overflow: hidden;
   display: grid;
   place-items: center;
+  /* Placeholder premium (sem imagem): base escura + leve brilho dourado */
+  background:
+    radial-gradient(circle at 50% 32%, color-mix(in srgb, var(--gold-500) 10%, transparent), transparent 62%),
+    linear-gradient(160deg, var(--surface-2), var(--bg-800));
+  border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--t), box-shadow var(--t);
+  transition: transform var(--t), box-shadow var(--t), border-color var(--t);
 }
 .game-card:hover .game-thumb {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md), 0 0 0 1px rgba(245, 166, 35, 0.4);
+  box-shadow: var(--shadow-md), 0 0 0 1px color-mix(in srgb, var(--gold-500) 40%, transparent);
 }
 
 .game-emoji {

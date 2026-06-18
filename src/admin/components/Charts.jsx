@@ -31,8 +31,8 @@ export function AreaChart({ data, series }) {
         <defs>
           {series.map((s) => (
             <linearGradient key={s.key} id={`grad-${s.key}`} x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor={s.color} stopOpacity="0.35" />
-              <stop offset="1" stopColor={s.color} stopOpacity="0" />
+              <stop offset="0" style={{ stopColor: s.color }} stopOpacity="0.35" />
+              <stop offset="1" style={{ stopColor: s.color }} stopOpacity="0" />
             </linearGradient>
           ))}
         </defs>
@@ -40,8 +40,8 @@ export function AreaChart({ data, series }) {
           const gy = PAD.t + innerH - g * innerH;
           return (
             <g key={i}>
-              <line x1={PAD.l} y1={gy} x2={W - PAD.r} y2={gy} stroke="#243a59" strokeWidth="1" />
-              <text x={PAD.l - 8} y={gy + 4} textAnchor="end" fontSize="10" fill="#66788f">
+              <line x1={PAD.l} y1={gy} x2={W - PAD.r} y2={gy} style={{ stroke: 'var(--border)' }} strokeWidth="1" />
+              <text x={PAD.l - 8} y={gy + 4} textAnchor="end" fontSize="10" style={{ fill: 'var(--text-dim)' }}>
                 {abbr(Math.round(g * max))}
               </text>
             </g>
@@ -53,7 +53,7 @@ export function AreaChart({ data, series }) {
           return (
             <g key={s.key}>
               <polygon points={area} fill={`url(#grad-${s.key})`} />
-              <polyline points={line} fill="none" stroke={s.color} strokeWidth="2.4" strokeLinejoin="round" />
+              <polyline points={line} fill="none" style={{ stroke: s.color }} strokeWidth="2.4" strokeLinejoin="round" />
             </g>
           );
         })}
@@ -86,8 +86,8 @@ export function BarChart({ data }) {
           const gy = PAD.t + innerH - g * innerH;
           return (
             <g key={i}>
-              <line x1={PAD.l} y1={gy} x2={W - PAD.r} y2={gy} stroke="#243a59" strokeWidth="1" />
-              <text x={PAD.l - 8} y={gy + 4} textAnchor="end" fontSize="10" fill="#66788f">{abbr(Math.round(g * max))}</text>
+              <line x1={PAD.l} y1={gy} x2={W - PAD.r} y2={gy} style={{ stroke: 'var(--border)' }} strokeWidth="1" />
+              <text x={PAD.l - 8} y={gy + 4} textAnchor="end" fontSize="10" style={{ fill: 'var(--text-dim)' }}>{abbr(Math.round(g * max))}</text>
             </g>
           );
         })}
@@ -95,16 +95,16 @@ export function BarChart({ data }) {
           const cx = PAD.l + groupW * i + groupW / 2;
           return (
             <g key={d.month}>
-              <rect x={cx - barW - 2} y={y(d.revenue)} width={barW} height={PAD.t + innerH - y(d.revenue)} rx="3" fill="#22c55e" />
-              <rect x={cx + 2} y={y(d.expenses)} width={barW} height={PAD.t + innerH - y(d.expenses)} rx="3" fill="#e63946" opacity="0.85" />
-              <text x={cx} y={H - 8} textAnchor="middle" fontSize="10" fill="#93a4bb">{d.month}</text>
+              <rect x={cx - barW - 2} y={y(d.revenue)} width={barW} height={PAD.t + innerH - y(d.revenue)} rx="3" style={{ fill: 'var(--green-500)' }} />
+              <rect x={cx + 2} y={y(d.expenses)} width={barW} height={PAD.t + innerH - y(d.expenses)} rx="3" style={{ fill: 'var(--red-500)' }} opacity="0.85" />
+              <text x={cx} y={H - 8} textAnchor="middle" fontSize="10" style={{ fill: 'var(--text-muted)' }}>{d.month}</text>
             </g>
           );
         })}
       </svg>
       <div className="adm-legend">
-        <span className="adm-legend-item"><span className="adm-legend-dot" style={{ background: '#22c55e' }} />Receita</span>
-        <span className="adm-legend-item"><span className="adm-legend-dot" style={{ background: '#e63946' }} />Despesas</span>
+        <span className="adm-legend-item"><span className="adm-legend-dot" style={{ background: 'var(--green-500)' }} />Receita</span>
+        <span className="adm-legend-item"><span className="adm-legend-dot" style={{ background: 'var(--red-500)' }} />Despesas</span>
       </div>
     </div>
   );
@@ -122,7 +122,7 @@ export function Donut({ data, size = 180 }) {
   return (
     <div className="adm-donut-wrap">
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-        <circle cx={cx} cy={cy} r={r} fill="none" stroke="#1d3047" strokeWidth="16" />
+        <circle cx={cx} cy={cy} r={r} fill="none" style={{ stroke: 'var(--border-soft)' }} strokeWidth="16" />
         {data.map((d) => {
           const len = (d.value / total) * circ;
           const seg = (
@@ -132,7 +132,7 @@ export function Donut({ data, size = 180 }) {
               cy={cy}
               r={r}
               fill="none"
-              stroke={d.color}
+              style={{ stroke: d.color }}
               strokeWidth="16"
               strokeDasharray={`${len} ${circ - len}`}
               strokeDashoffset={-offset}
@@ -143,8 +143,8 @@ export function Donut({ data, size = 180 }) {
           offset += len;
           return seg;
         })}
-        <text x={cx} y={cy - 2} textAnchor="middle" fontSize="13" fill="#93a4bb">Métodos</text>
-        <text x={cx} y={cy + 16} textAnchor="middle" fontSize="15" fontWeight="700" fill="#f8f9fa">{data.length}</text>
+        <text x={cx} y={cy - 2} textAnchor="middle" fontSize="13" style={{ fill: 'var(--text-muted)' }}>Métodos</text>
+        <text x={cx} y={cy + 16} textAnchor="middle" fontSize="15" fontWeight="700" style={{ fill: 'var(--text-strong)' }}>{data.length}</text>
       </svg>
       <div className="adm-donut-legend">
         {data.map((d) => (
