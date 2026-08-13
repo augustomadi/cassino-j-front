@@ -1,0 +1,200 @@
+.account-modal {
+  max-width: 480px;
+}
+
+.security-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 6px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.security-tabs button {
+  padding: 10px 4px 12px;
+  margin-right: 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.security-tabs button.is-active {
+  color: var(--text-strong);
+  border-bottom-color: var(--gold-500);
+}
+
+.security-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.security-status {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+}
+.security-status.is-on {
+  color: var(--green-400);
+  background: color-mix(in srgb, var(--green-500) 14%, transparent);
+}
+.security-status.is-pending {
+  color: var(--gold-400);
+  background: color-mix(in srgb, var(--gold-500) 14%, transparent);
+}
+.security-status.is-rejected {
+  color: var(--red-text);
+  background: color-mix(in srgb, var(--red-500) 14%, transparent);
+}
+.security-status.is-off {
+  color: var(--text-muted);
+  background: var(--surface-2);
+}
+
+.security-qr {
+  display: block;
+  margin: 4px auto 12px;
+  border-radius: var(--r-sm);
+  background: #fff;
+  padding: 8px;
+}
+
+.security-secret {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  word-break: break-all;
+}
+.security-secret code {
+  color: var(--gold-400);
+}
+
+.security-recovery-codes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0 0 20px;
+  padding: 14px;
+  background: var(--bg-900);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  list-style: none;
+}
+.security-recovery-codes li {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-strong);
+}
+
+.security-sessions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.security-sessions li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-900);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+}
+.security-sessions li > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.security-sessions .chip {
+  align-self: flex-start;
+  margin: 2px 0;
+}
+.security-session-agent,
+.security-session-time {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+}
+
+/* ---- Perfil ---- */
+.account-readonly {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  background: var(--bg-900);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+}
+.account-readonly > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.account-readonly span {
+  font-size: 0.74rem;
+  color: var(--text-dim);
+}
+.account-readonly strong {
+  font-size: 0.88rem;
+  color: var(--text-strong);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.account-verified {
+  font-style: normal;
+  font-size: 0.7rem;
+  color: var(--green-400);
+}
+.account-unverified {
+  font-style: normal;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+.account-saved {
+  color: var(--green-400);
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+/* ---- Extrato ---- */
+.account-extract ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.account-extract li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-900);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+}
+.account-extract li > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.account-extract-amount {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.account-extract-amount.pos {
+  color: var(--green-400);
+}
+.account-extract-amount.neg {
+  color: var(--red-text);
+}
+.account-extract-more {
+  width: 100%;
+}

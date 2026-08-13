@@ -1,0 +1,173 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.home-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  margin-bottom: 12px;
+}
+
+/* ---- Hero: banner + promos laterais ---- */
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.home-side-promos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.side-promo {
+  position: relative;
+  border-radius: var(--r-lg);
+  padding: 18px 20px;
+  overflow: hidden;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
+  transition: border-color var(--t), background var(--t);
+}
+.side-promo:hover {
+  border-color: var(--border-gold);
+  background: var(--surface-2);
+}
+.side-promo-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.side-promo-text span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.side-promo-text strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: var(--text-strong);
+}
+.side-promo-cta {
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 7px 16px;
+  font-size: 0.82rem;
+}
+.side-promo-emoji {
+  position: absolute;
+  right: 14px;
+  bottom: 8px;
+  font-size: 3.4rem;
+  opacity: 0.5;
+  filter: grayscale(0.2);
+  z-index: 1;
+}
+
+/* Promo com imagem (arte ocupa o card inteiro) */
+.side-promo-image {
+  padding: 0;
+}
+.side-promo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--r-lg);
+}
+
+/* ---- CTA "Todos os Jogos" (abre o drawer com o catálogo completo) ---- */
+.all-games-cta {
+  padding: 22px 24px;
+  border-radius: var(--r-lg);
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
+}
+.all-games-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.all-games-cta-inner > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.all-games-cta-inner strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--text-strong);
+}
+.all-games-cta-inner p {
+  margin-top: 2px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ---- Footer ---- */
+.home-footer {
+  border-top: 1px solid var(--border-soft);
+  padding-top: 22px;
+  margin-top: 6px;
+}
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.footer-brand strong {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-strong);
+}
+.footer-brand p {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: 420px;
+}
+.footer-legal {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+@media (max-width: 1024px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+  .home-side-promos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .home {
+    gap: 24px;
+  }
+  .home-side-promos {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

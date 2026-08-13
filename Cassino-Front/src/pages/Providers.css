@@ -1,0 +1,38 @@
+.providers-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.provider-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  border-radius: var(--r-lg);
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
+  color: var(--text-strong);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: border-color var(--t), background var(--t);
+}
+
+.provider-card:hover {
+  border-color: var(--border-gold);
+  background: var(--surface-2);
+}
+
+.provider-card-icon {
+  display: grid;
+  place-items: center;
+  color: var(--gold-400);
+  flex-shrink: 0;
+}

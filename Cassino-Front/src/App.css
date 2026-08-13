@@ -1,0 +1,27 @@
+.app {
+  min-height: 100vh;
+  background: var(--bg-grad);
+  background-attachment: fixed;
+}
+
+.app-main {
+  padding-top: var(--header-h);
+  padding-left: var(--sidebar-w);
+  min-height: 100vh;
+}
+
+.app-content {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+}
+
+@media (max-width: 1024px) {
+  .app-main {
+    padding-left: 0;
+    padding-bottom: var(--bottomnav-h);
+  }
+  .app-content {
+    padding: 18px 16px calc(var(--bottomnav-h) + 20px);
+  }
+}

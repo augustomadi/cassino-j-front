@@ -1,0 +1,196 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  background: color-mix(in srgb, var(--bg-800) 85%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+  z-index: 70;
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 18px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--surface-1);
+  color: var(--text);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.icon-btn:hover {
+  background: var(--surface-2);
+  color: var(--text-strong);
+}
+.header-menu {
+  display: none;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: var(--text-strong);
+}
+
+.header-search {
+  flex: 1;
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  height: 44px;
+  background: var(--bg-900);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  color: var(--text-dim);
+  transition: border-color var(--t), box-shadow var(--t);
+}
+.header-search:focus-within {
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold-500) 12%, transparent);
+}
+.header-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-strong);
+  font-size: 0.92rem;
+}
+.header-search input::placeholder {
+  color: var(--text-dim);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.1;
+  padding-right: 4px;
+}
+.balance-label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+.balance-value {
+  font-size: 0.98rem;
+}
+.balance-value-ingame {
+  color: var(--gold-500);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--grad-gold);
+  color: var(--on-secondary);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.account-menu {
+  position: relative;
+}
+
+.account-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 79;
+  background: transparent;
+}
+
+.account-menu-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 80;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+}
+
+.account-menu-name {
+  padding: 8px 10px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  border-bottom: 1px solid var(--border-soft);
+  margin-bottom: 6px;
+}
+
+.account-menu-item {
+  text-align: left;
+  padding: 10px;
+  border-radius: var(--r-sm);
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.account-menu-item:hover {
+  background: var(--surface-2);
+  color: var(--text-strong);
+}
+.account-menu-item-danger {
+  color: var(--red-text);
+}
+
+/* ============ Mobile ============ */
+/* header-menu oculto — BottomNav "Menu" cobre essa função em mobile */
+
+@media (max-width: 760px) {
+  .header-search {
+    display: none;
+  }
+  .brand-name {
+    display: none;
+  }
+  .header-deposit {
+    padding: 10px 12px;
+  }
+  .header-deposit-label {
+    display: none;
+  }
+  .balance-label {
+    display: none;
+  }
+}

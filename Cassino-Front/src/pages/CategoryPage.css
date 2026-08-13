@@ -1,0 +1,20 @@
+.category-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-page-label {
+  margin-top: 6px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.category-more {
+  align-self: center;
+  padding: 10px 28px;
+}

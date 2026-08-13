@@ -1,0 +1,87 @@
+.game-section {
+  margin-bottom: 8px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+.section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.18rem;
+  font-weight: 700;
+}
+.section-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--surface-1);
+  color: var(--gold-400);
+}
+
+.section-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-arrow {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--surface-1);
+  color: var(--text-muted);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.section-arrow:hover {
+  background: var(--surface-2);
+  color: var(--text-strong);
+}
+.section-all {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 8px 14px;
+  border-radius: 9px;
+  background: var(--surface-1);
+  transition: color var(--t-fast), background var(--t-fast);
+}
+.section-all:hover {
+  color: var(--gold-400);
+  background: var(--surface-2);
+}
+
+.section-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 160px;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 4px;
+}
+.section-cell {
+  scroll-snap-align: start;
+}
+
+@media (max-width: 760px) {
+  .section-track {
+    grid-auto-columns: 148px;
+    gap: 10px;
+  }
+  .section-title {
+    font-size: 1.02rem;
+  }
+  .section-all {
+    display: none;
+  }
+}

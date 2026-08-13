@@ -1,0 +1,61 @@
+.deposit-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.deposit-presets button {
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border);
+  background: var(--bg-900);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.deposit-presets button:hover {
+  border-color: var(--gold-500);
+}
+.deposit-presets button.is-active {
+  background: var(--grad-gold);
+  color: var(--on-secondary);
+  border-color: transparent;
+}
+
+.deposit-pix-qr {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 16px;
+  border-radius: var(--r-sm);
+  background: #fff;
+  padding: 8px;
+}
+
+.deposit-pix-code {
+  display: block;
+  word-break: break-all;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: var(--bg-900);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.deposit-pix-copy {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-900);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.deposit-pix-copy:hover {
+  border-color: var(--gold-500);
+}

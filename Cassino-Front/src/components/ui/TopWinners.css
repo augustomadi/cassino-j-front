@@ -1,0 +1,91 @@
+.topwin {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(250px, 1fr);
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.topwin-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-md);
+  padding: 12px;
+  overflow: hidden;
+  transition: border-color var(--t), transform var(--t);
+}
+.topwin-card:hover {
+  border-color: color-mix(in srgb, var(--gold-500) 40%, transparent);
+  transform: translateY(-2px);
+}
+
+.topwin-rank {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--gold-400);
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.topwin-thumb {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background:
+    radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--gold-500) 12%, transparent), transparent 65%),
+    linear-gradient(160deg, var(--surface-2), var(--bg-800));
+}
+.topwin-thumb img,
+.topwin-thumb video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.topwin-emoji {
+  font-size: 1.7rem;
+}
+
+.topwin-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+}
+.topwin-info strong {
+  font-size: 0.88rem;
+  color: var(--text-strong);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.topwin-info .money {
+  font-size: 0.86rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topwin-play {
+  align-self: flex-start;
+  padding: 5px 14px;
+  font-size: 0.72rem;
+  margin-top: 1px;
+}
+.topwin-play:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
